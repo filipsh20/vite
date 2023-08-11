@@ -1,11 +1,9 @@
 import express from "express";
-import cookieParser from "cookie-parser";
 import cors from "./middlewars/cors";
 import jwt from "jsonwebtoken";
 
 const app = express();
 
-app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 app.use(cors);
